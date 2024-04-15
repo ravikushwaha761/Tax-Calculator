@@ -1,0 +1,229 @@
+*{  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+h2{
+  margin-left: 100px;
+  margin-bottom: 50px;
+}
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 2px solid #080000;
+  border-radius: 5px;
+}
+.input-group {
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+.input-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.input-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+#btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 50px;
+}
+#btn:hover {
+  background-color: #2a5fad;
+  
+}
+.form-box .fa-solid{
+  position: absolute;
+  margin-top: -22px;
+}
+.first{
+  position: absolute;
+  margin-left: 200px;
+  font-size: 18px;
+}
+.second{
+  position: absolute;
+  margin-left: 140px;
+}
+.third{
+  position: absolute;
+  margin-left: 80px; 
+}
+.fourth{
+  position: absolute;
+  margin-left: 230px;
+}
+.first-1{
+  position: absolute;
+  margin-left: 315px;
+  margin-top: -2px;
+  /* visibility: hidden; */
+}
+/* .first-1 .fa-solid {
+  visibility: visible;
+} */
+/* .second-1{
+  position: absolute;
+  margin-left: 315px;
+  margin-top: -2px;
+} */
+#tooltip{
+  position: relative;
+  cursor: pointer;
+}
+#tooltipText{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 200px;
+  transform: translate(-5%, -133%);
+  background-color: #888888;
+  color: #fff;
+  white-space: wrap;
+  padding: 10px 15px;
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+#tooltipText::before{
+  content: "";
+  position: absolute;
+  left: 10%;
+  top: 95%;
+  transform: translateX(-50%);
+  border: 15px solid;
+  border-color: #888888 transparent transparent transparent;
+}
+#tooltip:hover #tooltipText{
+  top: -100%;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* start Second Tooltip */
+#tooltip-2{
+  position: relative;
+  cursor: pointer;
+}
+#tooltipText-2{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 200px;
+  transform: translate(-5%, -160%);
+  background-color: #888888;
+  color: #fff;
+  white-space: wrap;
+  padding: 10px 15px;
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+#tooltipText-2::before{
+  content: "";
+  position: absolute;
+  left: 10%;
+  top: 95%;
+  transform: translateX(-50%);
+  border: 15px solid;
+  border-color: #888888 transparent transparent transparent;
+}
+#tooltip-2:hover #tooltipText-2{
+  top: -100%;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* End Second Tooltip................. */
+
+/* Income Tooltip start ..........*/
+#tooltip-extraIncome{
+  position: relative;
+  cursor: pointer;
+}
+#tooltipText-extraIncome{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 200px;
+  transform: translate(-5%, -150%);
+  background-color: #888888;
+  color: #fff;
+  white-space: wrap;
+  padding: 10px 15px;
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+#tooltipText-extraIncome::before{
+  content: "";
+  position: absolute;
+  left: 10%;
+  top: 95%;
+  transform: translateX(-50%);
+  border: 15px solid;
+  border-color: #888888 transparent transparent transparent;
+}
+#tooltip-extraIncome:hover #tooltipText-extraIncome{
+  top: -100%;
+  visibility: visible;
+  opacity: 1;
+}
+/* Income Tooltip End......... */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 5px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
