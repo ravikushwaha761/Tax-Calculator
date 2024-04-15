@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tax Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  
+</head>
+<body>
+<div class="container">
+  <div class="form-box">
+    <h2>Tax Calculator</h2>
+
+    <!-- Annual income work start -->
+    <div class="input-group">
+        <label for="income">Enter Gross annual income</label>
+       <div id="tooltip"> 
+        <div class="first">
+        <span id="tooltipText">Gross annual income is your total salary in a year before any deduction</span>
+          <i class="fa-solid fa-circle-question"></i>
+        </div>
+      </div>
+        <input type="" id="income" placeholder="Enter your income">
+        <div id="tooltip-2">
+        <div class="first-1">
+          <i id="notify" class="fa-solid "></i>
+          <span id="tooltipText-2">Please enter numbers only</span>
+      </div>
+      </div>
+    </div>         
+    <!-- Annual income work End.......... -->
+
+    <!-- Extra Income input work Start..... -->
+    <div class="input-group">
+        <label for="extraIncome">Enter Extra income <span></span></label>
+        <div id="tooltip-extraIncome">
+        <div class="second">
+          <i class="fa-solid fa-circle-question"></i>
+             <span id="tooltipText-extraIncome">Extra Income is that which you earned beside your salary</span>
+        </div>
+      </div>
+        <input type="" id="extraIncome" placeholder="Enter your extra income">   
+        <div id="tooltip-2">
+          <div class="first-1">
+            <i id="errorextraincome" class="fa-solid "></i>
+            <span id="tooltipText-2">Please enter numbers only</span>
+        </div>     
+    </div>
+  </div>
+    <!-- Extra Income input work End..... -->
+    
+    <!-- Age selection  work Start..... -->
+    <div class="input-group">
+      <label for="age"> Age Group </label>
+      <div id="tooltip-extraIncome">
+      <div class="third">
+        <i class="fa-solid fa-circle-question"></i>
+        <span id="tooltipText-extraIncome">Select your age group between given age group</span>
+      </div>
+    </div>
+      <select id="age">
+          <option value="">Select Age</option>
+          <option value="<40">&lt; 40</option>
+          <option value=">=40&<60">&ge; 40 &lt; 60</option>
+          <option value=">=60">&ge; 60</option>
+      </select>
+  </div>
+    <!-- Age selection work End..... -->
+
+  <!-- Total Deduction input work Start..... -->
+  <div class="input-group">
+    <label for="deductions">Enter Total apllicable Deduction <span></span></label>
+    <div id="tooltip-extraIncome">
+      <div class="fourth">
+    <i class="fa-solid fa-circle-question"></i>
+    <span id="tooltipText-extraIncome">Enter your total overall deduction on your salary</span>
+  </div> 
+</div>
+    <input type="number"  id="deductions" placeholder="Enter your age">
+    <div id="tooltip-2">
+      <div class="first-1">
+        <i id="errordeductions" class="fa-solid "></i>
+        <span id="tooltipText-2">Please enter numbers only</span>
+    </div>     
+</div>
+    
+</div>
+<!-- Total Deduction input work End..... -->
+
+<button id="btn" onclick="calculateTax()">Calculate Tax</button>
+</div>
+</div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Your overall income will be:</h2>
+            <h3 id="taxResult"></h3>
+            <h5>after tax deduction</h5>
+        </div>
+    </div>
+<script src="tax.js"></script>
+</body>
+</html>
